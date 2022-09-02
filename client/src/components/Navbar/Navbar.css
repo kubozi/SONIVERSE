@@ -1,0 +1,71 @@
+@font-face 
+{
+  font-family: "EXTRAORDINARI CRAFT";
+  src: local("EXTRAORDINARI CRAFT"),
+  url("../../assets/fonts/EXTRAORDINARI CRAFT.ttf") format("truetype");
+  /* font-weight: bold; */
+  font-weight:900;
+  /* font-size: 20; */
+}
+
+@media (prefers-reduced-motion: no-preference) 
+{
+  .logo:hover
+  {
+    animation: logo 0.4s ease;
+  }
+}
+
+@keyframes logo 
+{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding-left: 50px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid transparent;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 130px;
+
+
+  }
+  nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  nav li{
+    list-style-type: none;
+    margin-left: 40px;
+  }
+  nav h1{
+    font-size: 2em;
+  }
+  nav p, nav a{
+    color: white;
+    font-weight: 300;
+  }
+
+  .logo-header {
+    /* color:coral; */
+    font-family: "EXTRAORDINARI CRAFT";
+    font-size: 2cm;
+    text-decoration: no;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* text-shadow: 1px 1px red; */
+    text-shadow: 1px 1px 1px grey, 0 0 0.1em grey, 0 0 0.01em grey;
+  }
