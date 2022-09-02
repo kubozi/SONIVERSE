@@ -4,9 +4,9 @@ Soniverse is a marketplace for audio sound effects creators where they can monet
 
 To run the project:
 
-# cd {project}
-# npm install
-# npm start
+cd {project}
+npm install
+npm start
 
 Temple - Tezos Wallet (https://chrome.google.com/webstore/detail/temple-tezos-wallet/ookjlbkiijinhpmnjffcofjonbfbgaoc) 
 can be utilized to connect your wallet and start minting or buy other audio samples.
