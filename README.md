@@ -14,3 +14,4 @@ can be utilized to connect your wallet and start minting or buy other audio samp
 At the moment the smart contracts are deployed on JAKARTANET. 
 
 
+test
