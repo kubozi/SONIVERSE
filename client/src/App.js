@@ -18,7 +18,6 @@ function App() {
   const history = useHistory();
   
   const walletConnectedHandler = (address) => {
-    console.log('wallet connect handler : ' + address);
     setConnectedAddress(address);
     history.push('/');
   }
@@ -46,9 +45,6 @@ function App() {
           <Route path='/create' exact>
             <NewSound connectedAddress={connectedAddress} />
           </Route>
-          {/* <Route path='/index' exact>
-            <Test></Test>
-          </Route> */}
         </Switch>
       </main>
       <FooterContainer />

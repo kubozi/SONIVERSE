@@ -6,12 +6,19 @@ import data from '../../data/dummyData';
 import { getAllTokens } from '../../blockchain/tezos/tezosUtils'
 import LoadingSpinner from '../../UI/Spinners/LoadingSpinner';
 
-const LOAD_DELAY_BUFFER = 500;
+import { getUserTestData } from '../../API/api';
+import useHttp from '../../hooks/use-http';
+import { getShortLoadDelayBuffer } from '../../Utils/Utils';
 
 const SoundsList = (props) =>
 {
+    // fetch user data from db
+    const { sendRequest, status, data: loadedUserData } = useHttp(getUserTestData);
+    
     const [ sounds, setSounds ] = useState([]);
     const [ loaded, setLoaded ] = useState(false);
+
+    const LOAD_DELAY_BUFFER = getShortLoadDelayBuffer();
 
     useEffect(() => {
         async function getTokens() {
@@ -39,7 +46,7 @@ const SoundsList = (props) =>
             {
                 sounds &&
                 sounds.length &&
-                sounds.map((sound) => (
+                sounds.reverse().map((sound) => (
                     sound.collectable &&
                     <SoundItem
                         key={Math.random().toString()}

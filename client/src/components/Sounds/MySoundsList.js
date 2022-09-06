@@ -6,23 +6,26 @@ import Waveform from "./Waveform";
 import './SoundsList.css'
 import { getTokensByOwner } from '../../blockchain/tezos/tezosUtils';
 import LoadingSpinner from '../../UI/Spinners/LoadingSpinner';
-
-const LOAD_DELAY_BUFFER = 500;
+import { getUserTestData } from '../../API/api';
+import useHttp from '../../hooks/use-http';
+import { getShortLoadDelayBuffer } from '../../Utils/Utils';
 
 const MySoundsList = (props) =>
 {
-    console.log('TESTING MY SOUNDS LIST');
+    // fetch user data from db
+    const { sendRequest, status, data: loadedUserData } = useHttp(getUserTestData);
+
     const params = useParams();
     const { address } = params;
 
     const [ sounds, setSounds ] = useState([]);
     const [ loaded, setLoaded ] = useState(false);
 
-    console.log('conected address: ' + props.connectedAddress);
+    const LOAD_DELAY_BUFFER = getShortLoadDelayBuffer();
+
 
     useEffect(() => {
         async function getMyTokens() {
-            console.log('get my tokens');
             const tokens = await getTokensByOwner(address);
             console.log(sounds);
             setSounds(tokens);
@@ -47,7 +50,7 @@ const MySoundsList = (props) =>
             {
                 sounds &&
                 sounds.length &&
-                sounds.map((sound) => (
+                sounds.reverse().map((sound) => (
                     <SoundItem
                         key={Math.random().toString()}
                         tokenID={sound.tokenID} 

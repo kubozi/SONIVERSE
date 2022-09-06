@@ -7,12 +7,6 @@ const uploadFile = async (
     description,
     owner) => 
 {
-    // return await uploadFileW3S(
-    //     soundfile, 
-    //     name, 
-    //     description, 
-    //     owner);
-
     return await uploadFileNFTS(
         soundfile,
         name,

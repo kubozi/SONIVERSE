@@ -10,9 +10,6 @@ export const uploadFileNFTS = async(
         try
         {
             soundfile = soundfile[0];
-            console.log("NFT STORAGE: ")
-            console.log('soundfile: ' + soundfile);
-            console.log('name: ' + name);
             const token = config.IPFS_NFTS_TOKEN;
             const client = new NFTStorage({ token: token });
             const metadata = await client.store({
@@ -38,7 +35,6 @@ export const uploadFileNFTS = async(
         name,
         description,
         owner) => {
-        console.log('uploading file w3s');
         try
         {
             const token = config.IPFS_W3S_TOKEN;
