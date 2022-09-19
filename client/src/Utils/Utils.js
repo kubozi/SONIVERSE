@@ -29,7 +29,7 @@ const getShortAddress = (address) => {
 
 const addHttpsUrl = (url) => 'https://' + url;
 
-const getShortLoadDelayBuffer = () => 500;
+const getShortLoadDelayBuffer = () => 150;
 
 module.exports = {
     toUint8Array,
