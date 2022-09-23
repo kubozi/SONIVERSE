@@ -9,9 +9,11 @@ import './NewSound.css';
 import { uploadFile } from '../../blockchain/ipfsService';
 import { getNewTokenID, mint, connectWallet } from '../../blockchain/tezos/tezosUtils';
 import { upload } from '@testing-library/user-event/dist/upload';
+import { serverUpload } from '../../Utils/Utils'
 const fs = require('fs');
 
 const LOAD_DELAY_BUFFER = 2000;
+const SERVER_UPLOAD = false;
 
 const NewSound = (props) => {
 
@@ -35,15 +37,6 @@ const NewSound = (props) => {
         e.preventDefault();
 
         if(props.connectedAddress === '') await connectWallet();
-
-        // if(!name || !price || !selectedFile) return;
-
-        // const fileExt = selectedFile['name'].split('.').pop().toUpperCase();
-        // if(fileExt !== 'WAV')
-        // {
-        //     console.error('Only audio files are allowed for upload');
-        //     return;
-        // }
 
         console.log('test');
         setBusyMsg('Minting...');
@@ -69,6 +62,27 @@ const NewSound = (props) => {
         setBusyMsg('Sound minted successfully!');
         // setBusy(false);
         setMinted(true);
+
+        // upload user & token data to server
+        if(minted &&
+           SERVER_UPLOAD)
+        {
+            var data = new FormData();
+            data.append('name', name);
+            data.append('metadataURL', metadataURL);
+            data.append('description', description);
+            data.append('price', price);
+            data.append('owner', props.connectedAddress);
+            data.append('tokenID', tokenID);
+
+            const uploadUserDataResponse = await fetch('/create', {
+                method: 'POST',
+                body: data
+            });
+
+            const uploadData = await uploadUserDataResponse.json();
+            if(uploadData['uploaded'] == 'false') console.log('failed to upload user data to server');
+        }
 
         setTimeout(() => {
             history.push('/');

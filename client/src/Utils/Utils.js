@@ -31,10 +31,13 @@ const addHttpsUrl = (url) => 'https://' + url;
 
 const getShortLoadDelayBuffer = () => 150;
 
+const serverUpload = () => false;
+
 module.exports = {
     toUint8Array,
     stringToUint8Array,
     getShortAddress,
     addHttpsUrl,
-    getShortLoadDelayBuffer
+    getShortLoadDelayBuffer,
+    serverUpload
 }
