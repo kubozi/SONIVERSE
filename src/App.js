@@ -5,7 +5,6 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import SoundsList from './components/Sounds/SoundsList';
-import Test from './components/Test';
 import NewSound from './components/Sounds/NewSound';
 import SoundDetails from './components/Sounds/SoundDetails';
 import { FooterContainer } from './components/Footer/Footer'
