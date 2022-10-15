@@ -98,7 +98,7 @@ const SoundDetails = (props) => {
 
                 <br/>
                 <br/>
-                <div>Price: {sound.amount}</div>
+                <div>Price: {sound.amount} microTezos</div>
                 <br/>
                 { props.connectedAddress &&
                   props.connectedAddress != owner &&
