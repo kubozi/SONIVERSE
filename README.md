@@ -52,11 +52,11 @@ To properly test the platform functionality:
 
 Upload sound / mint audio assets: Users can use our web app to create sounds by first connecting to their wallet account and using the create link \
 on the navbar [create](http://localhost:3000/create) where they have to fill out the form and choose a sound to upload. \
-The code associated with this is in [NewSound.js](https://github.com/kubozi/SONIVERSE/blob/main/src/components/Sounds/NewSound.js) fileSubmitHandler method. 
+The code associated with this is in [NewSound.js](https://github.com/kubozi/SONIVERSE/blob/main/src/components/Sounds/NewSound.js) `fileSubmitHandler` method. 
 This method will first upload a sound to IPFS by using [nft.storage](https://nft.storage/). It will then run the mint function on our smart contract.
 
 Purchase NFT: A user can browse our web application by clicking on a sound, and use the buy button to purchase the audio asset. By purchasing the \
-NFT asset the ownership on the smart contract will change to the buyer's address. The buy/collect functionality on the client side is located in [SoundDetails.js](https://github.com/kubozi/SONIVERSE/blob/main/src/components/Sounds/SoundDetails.js).
+NFT asset the ownership on the smart contract will change to the buyer's address. The buy/collect functionality on the client side is located in [SoundDetails.js](https://github.com/kubozi/SONIVERSE/blob/main/src/components/Sounds/SoundDetails.js) `buyButtonHandler` method.
 
 React components: The main component responsible for rendering the platform is [App.js](https://github.com/kubozi/SONIVERSE/blob/main/src/App.js). \
 App.js consists of a header with the [navbar](https://github.com/kubozi/SONIVERSE/blob/main/src/components/Navbar/Navbar.js), the main body with the sound related components [sound components](https://github.com/kubozi/SONIVERSE/tree/main/src/components) and a placeholder [footer](https://github.com/kubozi/SONIVERSE/tree/main/src/components/Footer).
