@@ -11,6 +11,7 @@ import SoundDetails from './components/Sounds/SoundDetails';
 import { FooterContainer } from './components/Footer/Footer'
 import MySoundsList from './components/Sounds/MySoundsList';
 
+// The App component is the main component responsible for displaying the SONIVERSE web page. It consists of a dynamic Navbar header, the main body consists of various components that can be switched to by utilizing ReactRouter for loading faster different components depensing on user requests.
 function App() {
 
   const [ connectedAddress, setConnectedAddress ] = useState('');

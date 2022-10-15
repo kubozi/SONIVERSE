@@ -15,6 +15,7 @@ const fs = require('fs');
 const LOAD_DELAY_BUFFER = 2000;
 const SERVER_UPLOAD = false;
 
+// NewSound component is responsible for presenting a form to the user to upload a sound from the disk to IPFS, and then submit the asset to the Algorand network as well deply the asset's smart contract and initialize it. The method responsible for this is: fileSubmitHandler.
 const NewSound = (props) => {
 
     const history = useHistory();

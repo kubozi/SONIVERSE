@@ -10,6 +10,11 @@ import { getShortAddress } from '../../Utils/Utils'
 import './Navbar.css'
 import '../../assets/fonts/EXTRAORDINARI CRAFT.ttf';
 
+// Navbar is the navbar component of the app. It consists of the following links
+// 1. Logo (refresehs the page)
+// 2. My sounds (displayes the sounds owned by the connected address)
+// 3. Create (displays a form to mint/upload sound)
+// 4. Connect button to connect your tezos wallet (Temple Wallet)
 const Navbar = (props) => {
 
     const [ selectedAccount, setSelectedAccount ] = useState('');

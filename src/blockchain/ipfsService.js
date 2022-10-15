@@ -1,7 +1,7 @@
 const { uploadFileW3S } = require('./web3StorageWrapper');
 const { uploadFileNFTS } = require('./web3StorageWrapper');
 
-const uploadFile = async (
+export const uploadFile = async (
     soundfile,
     name,
     description,
@@ -13,8 +13,3 @@ const uploadFile = async (
         description,
         owner);
 };
-
-module.exports = 
-{
-    uploadFile,
-}

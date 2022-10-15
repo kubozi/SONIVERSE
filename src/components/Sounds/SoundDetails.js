@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
-import {Buffer} from 'buffer';
 import { Route, Link } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 
@@ -18,6 +16,7 @@ var urlencode = require('urlencode');
 
 const LOAD_DELAY_BUFFER = 2000;
 
+// The SoundDetails component is used for displaying the main info regarding the audio asset creator, wave audio palyer, the price of the asset and a button for buying the asset.
 const SoundDetails = (props) => {
 
     const history = useHistory();
