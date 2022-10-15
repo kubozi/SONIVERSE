@@ -2,9 +2,9 @@
 
 Soniverse is a marketplace for audio sound effects creators where they can monetize their work using the Tezos blockchain network.
 
-The smart contracts for our platform are deployed on the Kathmadunet TESTNET, their addresses are: \
-1. KT1QuAxw3bm1ct2J8oiq6RAy1h75CHkNvrm7 \
-2. KT1H9bSBD9tJYYKRY8aXAbT4MPQpwQ7VEScA \
+The smart contracts for our platform are deployed on the Kathmadunet TESTNET, their addresses are: 
+1. [KT1QuAxw3bm1ct2J8oiq6RAy1h75CHkNvrm7](https://better-call.dev/kathmandunet/KT1QuAxw3bm1ct2J8oiq6RAy1h75CHkNvrm7/operations)
+2. [KT1H9bSBD9tJYYKRY8aXAbT4MPQpwQ7VEScA](https://better-call.dev/kathmandunet/KT1H9bSBD9tJYYKRY8aXAbT4MPQpwQ7VEScA/operations)
 
 You can find the smart contract source code on IPFS: [SmartPy](https://smartpy.io/ide?cid=QmchaTaXmQCGuDtcBjyecqAz5xiGSQEEkFrHPoALzPhac7&k=bd3e1b5d2c1974263a1b)
 
