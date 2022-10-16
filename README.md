@@ -1,4 +1,4 @@
-# SONIVERSE audio asset marketplace
+# SONIVERSE: A blockchain-powered audio asset exchange
 
 Soniverse is a marketplace for audio sound effects creators where they can monetize their work using the Tezos blockchain network.
 
