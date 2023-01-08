@@ -1,3 +1,4 @@
 node_modules
-server
-build
+server/config/sercret_config.js
+client/src/config.js
+

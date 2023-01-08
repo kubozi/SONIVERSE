@@ -1,0 +1,12 @@
+.algo-logo-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.algo-logo-icon img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height: 50px;
+}
