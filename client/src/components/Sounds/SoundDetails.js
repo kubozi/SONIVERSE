@@ -50,6 +50,11 @@ const SoundDetails = (props) => {
     const buyButtonHandler = async() => {
         setBusy(true);
         setBusyMsg('Buying...');
+        console.log('sound.roayltiesPercentage: ' + sound.royalties);
+        console.log('sound.creator: ' + sound.creator);
+        console.log('sonnd.owner: ' + sound.owner);
+        const shouldPayRoyalties = sound.royalties > 0 && sound.creator !== sound.owner;
+        console.log('should pay royalties: ' + shouldPayRoyalties);
         var op = await buy(sound.tokenID, sound.price);
         if(!op) console.log('failed to buy sound');
         console.log(op);
@@ -63,12 +68,12 @@ const SoundDetails = (props) => {
         console.log(updateOwnerResponse);
 
         console.log('pay royalties to the creator');
-        if(sound.royaltiesPercentage > 0)
+        if(shouldPayRoyalties)
         {
             const royalPay = await payRoalyties(
                 sound.creator, 
                 sound.price, 
-                sound.royaltiesPercentage);
+                sound.royalties);
             if(!royalPay) console.log('failed to pay royalties');
             console.log('royalties paid to creator');
         }
@@ -127,7 +132,7 @@ const SoundDetails = (props) => {
                 }
 
                 { 
-                    !sound.collectable &&
+                    !sound.listed &&
                     props.connectedAddress &&
                     props.connectedAddress == sound.owner &&
                     <div>

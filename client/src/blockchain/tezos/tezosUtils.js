@@ -165,23 +165,33 @@ export const buy = async (id, amount) => {
     }
 }
 
-export const pay = async (to, amountInTezos) => {
-    try {
-        const op = await Tezos.wallet.transfer({ to, amountInTezos }).send();
-        await op.confirmation();
-    }
-    catch(err) {
-        console.log(err);
-        return false;
-    }
-    finally {
-        return true;
-    }
+export const pay = async (to, amount) => {
+    const amountTez = await convertMutezToTez(amount);
+    console.log('paying ' + amountTez + ' to ' + to + ');');
+    Tezos.wallet
+    .transfer({ to: to, amount: amountTez })
+    .send()
+    .then((op) => {
+      console.log(`Hash: ${op.opHash}`);
+  
+      op.confirmation()
+        .then((result) => {
+          console.log(result);
+          if (result.completed) {
+            console.log('Transaction correctly processed!');
+          } else {
+            console.log('An error has occurred');
+          }
+        })
+        .catch((err) => console.error(err));
+    });
 }
 
 export const payRoalyties = async (to, fullPrice, royaltiesPercentage) => {
 
-    const royaltiesTopay = fullPrice * royaltiesPercentage * 0.01;
+    const royaltiesTopay = parseFloat(fullPrice) * parseFloat(royaltiesPercentage) * 0.01;
+
+    console.log('royalties to pay: ' + royaltiesTopay + ' to: ' + to + ' full price: ' + fullPrice + ' royalties percentage: ' + royaltiesPercentage + ';');
 
     try
     {
@@ -210,4 +220,8 @@ export const sellOffer = async (tokenID, amount) => {
         console.log(err);
         return false;
     }
+}
+
+const convertMutezToTez = (mutez) => {
+    return parseFloat(parseFloat(mutez) / 1000000);
 }
