@@ -8,3 +8,4 @@ client/build/.DS_Store
 client/.DS_Store
 client/src/components/.DS_Store
 client/src/UI/.DS_Store
+server/config/
