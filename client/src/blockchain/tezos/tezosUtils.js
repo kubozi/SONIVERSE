@@ -179,9 +179,9 @@ export const pay = async (to, amountInTezos) => {
     }
 }
 
-export const payRoalyties = async (to, fullPrice, royaltiesNormalized) => {
+export const payRoalyties = async (to, fullPrice, royaltiesPercentage) => {
 
-    const royaltiesTopay = fullPrice * royaltiesNormalized;
+    const royaltiesTopay = fullPrice * royaltiesPercentage * 0.01;
 
     try
     {

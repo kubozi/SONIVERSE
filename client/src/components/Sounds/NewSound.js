@@ -138,10 +138,6 @@ const NewSound = (props) => {
           }, LOAD_DELAY_BUFFER)
     };
 
-    const tagsChangedHandler = (e) => {
-
-    }
-
     const valueLabelFormat = (value) => {
         if(!royaltiesChecked) return '0%';
         console.log(value);
@@ -151,6 +147,14 @@ const NewSound = (props) => {
         console.log(normalized);
         setRoyaltiesNormalizedStr(normalized.toString());
         return `${value}%`
+    }
+
+    const tagsChangedHandler = (e) => {
+
+        const newTags = e.target.value.split(' ').filter(t => {
+            return t != null && t != '';
+        });
+        setTags(newTags);
     }
 
     const testPayment = async (e) => {
@@ -200,7 +204,7 @@ const NewSound = (props) => {
                     defaultValue={price} 
                     onChange={(e) => setPrice(e.target.value)}/>
                 <label htmlFor="tags">tags:</label>
-                <textarea id="tags" name="tags" onChange={null} ></textarea>
+                <textarea id="tags" name="tags" onChange={tagsChangedHandler} ></textarea>
 
                 <label htmlFor="description">description</label>
                 <textarea id="description" name="description" onChange={(e) => setDescription(e.target.value)} ></textarea>

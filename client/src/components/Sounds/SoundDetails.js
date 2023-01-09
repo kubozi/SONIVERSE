@@ -6,7 +6,7 @@ import { Route, Link } from 'react-router-dom';
 import './SoundDetails.css';
 import Waveform from './Waveform';
 import Button from '../../UI/Buttons/Button';
-import { getToken, getTokenByID } from '../../blockchain/tezos/tezosUtils';
+import { getToken, getTokenByID, payRoalyties } from '../../blockchain/tezos/tezosUtils';
 import { buy } from '../../blockchain/tezos/tezosUtils';
 import { getOwner } from '../../blockchain/tezos/tezosUtils';
 import LoadingSpinner from '../../UI/Spinners/LoadingSpinner';
@@ -61,6 +61,17 @@ const SoundDetails = (props) => {
         console.log('update ownership on the db..');
         const updateOwnerResponse = await updateOwner(updateOwnerArgs);
         console.log(updateOwnerResponse);
+
+        console.log('pay royalties to the creator');
+        if(sound.royaltiesPercentage > 0)
+        {
+            const royalPay = await payRoalyties(
+                sound.creator, 
+                sound.price, 
+                sound.royaltiesPercentage);
+            if(!royalPay) console.log('failed to pay royalties');
+            console.log('royalties paid to creator');
+        }
 
         setBought(true);
         setBusyMsg("Successfully bought sound");
