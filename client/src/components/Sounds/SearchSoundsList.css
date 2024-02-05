@@ -1,0 +1,15 @@
+.search-sounds-list {
+    list-style: none;
+    padding: 25px;
+    margin: 100px;
+  }
+  
+.search-term-label{
+  margin-bottom: 0px;
+  font-size: 55px;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #0983f5 0%, #16f342 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

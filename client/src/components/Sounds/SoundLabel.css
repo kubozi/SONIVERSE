@@ -1,0 +1,57 @@
+.sound-item-label-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* justify-content: space-between; */
+    /* position: relative; */
+
+    text-align: center;
+
+    /* background-color: aqua; */
+
+    height: 30px;
+    margin-bottom: 8px;
+    /* margin-top: 10px; */
+}
+
+.sound-item-label-container ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    height: 30px;
+  }
+
+  .sound-item-label-container ul:hover {
+    border-top: 2px solid;
+    border-right: 2px solid;
+    border-image: linear-gradient(45deg, gold, deeppink) 1;
+    clip-path: inset(0px straight 10px);
+    animation: huerotate 1s infinite linear;
+    filter: hue-rotate(360deg);
+}
+
+@keyframes huerotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.sound-item-label-container li {
+list-style-type: none;
+margin-left: 30px;
+}
+
+.sound-item-label-soundname {
+	text-transform: uppercase;
+	background: linear-gradient(to right, #30CFD0 0%, #48e3a0 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.sound-item-label-owner {
+    opacity: 0.7;
+}

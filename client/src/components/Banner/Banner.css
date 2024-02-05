@@ -1,0 +1,65 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+/* body {
+  background-color: #010;
+} */
+
+.banner {
+
+    background-color: rgba(15, 15, 15, 0.061); 
+
+    /* background: rgb(0, 0, 0); */
+    /* background: linear-gradient(0deg, rgb(45, 114, 199) 0%, rgb(80, 216, 189) 100%); */
+
+    /* width: 500px; */
+    height: 790px;
+    /* background-color: aquamarine; */
+
+    /* border-radius: 22px; */
+    /* box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25); */
+
+    margin-left: 3%;
+    margin-right: 2%;
+
+    font-family: "Cairo";
+    text-align: center;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    letter-spacing: 2.5px;
+    line-height:2;
+    /* width: 100%; */
+}
+
+
+.banner h1 {
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 125px;
+    margin: 10px 0;
+  }
+
+  .banner p {
+    /* background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif); */
+    background-size: cover;
+    color: white;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    /* text-transform: uppercase; */
+    font-size: 50px;
+    margin: 10px 0;
+
+  }
+
+  .banner hr {
+    width: 100%;
+
+  }

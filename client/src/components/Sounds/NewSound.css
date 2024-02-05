@@ -1,0 +1,40 @@
+.create-sound form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.create-sound input,
+.create-sound textarea {
+display: block;
+width: 100%;
+line-height: 30px;
+outline: none;
+border-radius: 40px;
+border: 2px solid #303030;
+background: transparent;
+font-size: 16px;
+padding: 5px 16px;
+-moz-appearance: none;
+-webkit-appearance: none;
+appearance: none;
+transition: width .2s ease;
+color: white;
+}
+
+.create-sound input {
+height: 30px;
+}
+.create-sound textarea {
+height: 60px;
+}
+.create-sound label {
+display: block;
+text-align: left;
+margin: 24px 0 6px 16px;
+opacity: 0.6;
+}
+span.MuiButtonBase-root svg {
+fill: white;
+}
+span.MuiSlider-root {
+color: var(--primary);
+}

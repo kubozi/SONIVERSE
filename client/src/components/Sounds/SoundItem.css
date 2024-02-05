@@ -1,0 +1,71 @@
+.sound-item {
+  margin: 50px 0 0 0;
+  /* padding: 0.7rem; */
+  background-color: rgb(20, 20, 20);
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26); */
+  /* border-radius: 20px; */
+  /* text-align: center; */
+  /* color: white; */
+
+
+  /* border-style: solid; */
+  /* border-width: 1.5px; */
+  /* border-color: rgba(232, 232, 232, 0.24); */
+  /* box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.11),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.032),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.046),
+  0 10px 30px rgba(0, 0, 0, 0.12);
+
+  transition: transform .4s ease-out; */
+}
+
+.sound-item_link {
+  text-decoration: none;
+}
+
+.sound-item_link:hover {
+
+}
+
+.sound-item_label {
+  padding-right: 2%;
+  padding-top: 1%;
+  text-align: right;
+}
+
+.sound-item_label:hover {
+  /* color:yellow; */
+  color: #e04652;
+}
+
+.sound-item:hover
+{
+  /* transition: box-shadow 0.1s ease-in-out; */
+  transition: transform .15s ease-out;
+  transform: translate(0, 2.5px);
+  box-shadow: none;
+  border-color: rgba(232, 232, 232, 0.061);
+}
+
+.sound-item h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+.sound-item h3 {
+  color: white;
+  margin: 4px;
+  font-size: 1.1rem;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel 
+{
+   background-color: transparent;
+   color: transparent;
+   width: max-content;
+}
+

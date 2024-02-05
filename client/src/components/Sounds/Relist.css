@@ -1,0 +1,53 @@
+.relist-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.relist-form-h2 {
+    margin-bottom: 60px;
+    
+    font-size: 40px;
+    text-align: center;
+    
+    text-transform: uppercase;
+    background: linear-gradient(to right, #30CFD0 0%, #48e367 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.relist-form input,
+.relist-form textarea {
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    outline: none;
+    border-radius: 40px;
+    border: 2px solid #303030;
+    background: transparent;
+    font-size: 16px;
+    padding: 5px 16px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: width .2s ease;
+    color: white;
+}
+
+.relist-form input {
+    height: 30px;
+}
+.relist-form textarea {
+    height: 60px;
+}
+.relist-form label {
+    display: block;
+    text-align: left;
+    margin: 24px 0 6px 16px;
+    opacity: 0.6;
+}
+span.MuiButtonBase-root svg {
+    fill: white;
+}
+span.MuiSlider-root {
+    color: var(--primary);
+}

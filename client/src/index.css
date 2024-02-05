@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Zen+Dots&display=swap');
+
+body {
+  margin: 20px auto;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(20, 20, 20); 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+main {
+  margin-top: 110px;
+  margin-left: 110px;
+  margin-right: 130px;
+}
+header > div {
+  background: rgb(20, 20, 20);
+  height: 70px;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-top: 30px;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mr-20 {
+  margin-right: 80px;
+}
